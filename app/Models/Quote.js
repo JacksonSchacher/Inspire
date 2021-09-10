@@ -6,7 +6,8 @@ export class Quote {
 
     get Template() {
         return /*html*/ `
-        <cite>${this.quote}</cite>
+        <cite>${this.quote}</cite><br>
+        <small id="author" class="visually-hidden">${this.author}</small>
         `
     }
 }

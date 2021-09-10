@@ -9,4 +9,8 @@ export class QuotesController {
         ProxyState.on('quote', _drawQuote)
         quoteService.getQuote()
     }
+
+    toggleAuthor() {
+        document.getElementById('author').classList.toggle('visually-hidden')
+    }
 }
