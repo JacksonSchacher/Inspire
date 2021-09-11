@@ -2,7 +2,9 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-    /** @type {import('./Models/Image').Image} */
+    /** @type {import('./Models/Todo').Todo[]} */
+    todos = []
+        /** @type {import('./Models/Image').Image} */
     image = null
 
     /** @type {import('./Models/Weather').Weather} */
@@ -10,6 +12,8 @@ class AppState extends EventEmitter {
 
     /** @type {import('./Models/Quote').Quote} */
     quote = null
+
+    user = ''
 }
 
 export const ProxyState = new Proxy(new AppState(), {
